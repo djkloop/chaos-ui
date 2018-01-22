@@ -1,14 +1,27 @@
 {
   "name": "chaos-ui",
-  "version": "1.0.0",
-  "description": "A Vue.js Component Study UI ToolKit.",
+  "version": "1.0.1-rc.1",
+  "description": "A Vue.js Component Study UI ToolKit. But Now It's Not Working.",
   "author": "djkloop <675467298@qq.com>",
   "private": true,
+  "main": "dist/chaos-ui.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
+    "bootstrap": "yarn || npm i || cnpm i",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dist:style": "gulp --gulpfile build/build-style.js",
+    "dist:dev": "webpack --config build/ui-webpack-config/webpack.dist.dev.config.js",
+    "dist:prod": "webpack --config build/ui-webpack-config/webpack.dist.prod.config.js",
+    "clean": "rimraf dist",
+    "dist": "npm run clean && npm run dist:style && npm run dist:dev && npm run dist:prod",
+    "dist:all": "npm run dist",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "vue": "^2.5.2"
@@ -26,7 +39,9 @@
     "babel-preset-stage-2": "^6.22.0",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.1.3",
     "css-loader": "^0.28.0",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
@@ -39,7 +54,14 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-less": "^3.4.0",
+    "gulp-rename": "^1.2.2",
     "html-webpack-plugin": "^2.30.1",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
@@ -68,5 +90,10 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
