@@ -2,7 +2,6 @@
   "name": "chaos-ui",
   "version": "1.0.1-rc.1.2.0",
   "description": "A Vue.js Component Study UI ToolKit. But Now It's Not Working.",
-  
   "main": "dist/chaos-ui.js",
   "files": [
     "dist",
@@ -80,6 +79,7 @@
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
+    "vue-router": "^3.0.1",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
