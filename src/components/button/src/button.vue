@@ -5,7 +5,7 @@
 </template>
 <script>
 import { oneOf } from '../../../utils/assist'
-const prefixCls = 'ivu-btn'
+const prefixCls = 'chaos-btn'
 export default {
   name: 'Button',
   props: {
