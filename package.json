@@ -1,6 +1,6 @@
 {
   "name": "chaos-ui",
-  "version": "1.0.1-rc.1.2.0",
+  "version": "1.0.1-rc.1.3.0",
   "description": "A Vue.js Component Study UI ToolKit. But Now It's Not Working.",
   "main": "dist/chaos-ui.js",
   "files": [
